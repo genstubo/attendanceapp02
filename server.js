@@ -2,7 +2,7 @@
 require('./config/db');
 
 const app = require('express')();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 const userRouter = require('./api/User');
 
@@ -12,6 +12,6 @@ app.use(bodyPraser());
 
 app.use('/user', userRouter)
 
-app.listen(PORT, () => {
+app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 })
